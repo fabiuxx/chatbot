@@ -1,0 +1,30 @@
+{
+  "name": "chatbot-frontend",
+  "version": "1.0.0",
+  "description": "Interfaz Gráfica",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "bundle": "npx rollup -c --watch"
+  },
+  "author": "Fabio Antonio González Sosa",
+  "devDependencies": {
+    "@types/react": "18.2.34",
+    "@types/react-dom": "18.2.14",
+    "@types/ws": "8.5.8",
+    "mkdirp": "2.1.4",
+    "tslib": "2.5.0",
+    "typescript": "5.2.2",
+    "rollup": "4.2.0",
+    "@rollup/plugin-commonjs": "25.0.7",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-typescript": "11.1.5",
+    "rollup-plugin-gzip": "3.1.0",
+    "rollup-plugin-postcss": "4.0.2",
+    "@rollup/plugin-terser": "0.4.4"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="systemjs-importmap">
+            {
+              "imports": {
+                "react": "https://unpkg.com/react@18/umd/react.development.js",
+                "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.development.js",
+                "react-dom/client": "https://unpkg.com/react-dom@18/umd/react-dom.development.js",
+                "app": "./App.js.gz"
+              }
+            }
+        </script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.14.0/system.js"></script>
+</head>
+
+<body>
+    <div id="container" style="padding: 1em;">cargando ...</div>
+    <script>
+        (async function () {
+            try {
+                const module = await System.import("app");
+                module.mount(window.container);
+            } catch (err) {
+                alert("No se pudo cargar el módulo principal.");
+            }
+        })();
+    </script>
+</body>
+
+</html>
