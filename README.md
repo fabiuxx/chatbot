@@ -21,7 +21,7 @@ Cada componente del sistema aumentarse para dar respuesta a mayores cargas de tr
 - **Servicio backend:** Se puede mantener un cluster de varias instancias de este servicio, accesibles a través de un balanceador de carga.
 - **Servicio frontend:** Se puede mantener un cluster de varias instancias de este servicio, accesibles a través de un balanceador de carga.
 
-# Ejecución
+## Ejecución
 Se puede generar una imagen Docker para poner todos los servicios en marcha. Se incluye un *script* de Windows para generar la imagen Docker, pero el mismo puede ser extrapolado a entornos Linux. Una vez iniciado un contenedor con la imagen creada, se debe esperar a que se apliquen las configuraciones necesarias (principalmente de rabbitmq) antes de poder acceder a la interfaz gráfica de entrada.
 
 Si todo está correcto, la interfaz gráfica debe ser accesible por: http://127.0.0.1:8001/.
