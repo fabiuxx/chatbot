@@ -18,10 +18,12 @@ En el servicio de frontend, se encuentran los puntos de entrada para el inicio d
 ## Escalabilidad
 Cada componente del sistema aumentarse para dar respuesta a mayores cargas de trabajo:
 - **Servicio de mensajes:** Escalable mediante la formación de *clusters* de rabbitmq.
-- **Servicio backend:** Se puede mantener un cluster de varias instancias de este servicio, accesibles a traves de un balanceador de carga.
-- **Servicio frontend:** Se puede mantener un cluster de varias instancias de este servicio, accesibles a traes de un balanceador de carga.
+- **Servicio backend:** Se puede mantener un cluster de varias instancias de este servicio, accesibles a través de un balanceador de carga.
+- **Servicio frontend:** Se puede mantener un cluster de varias instancias de este servicio, accesibles a través de un balanceador de carga.
 
 # Ejecución
 Se puede generar una imagen Docker para poner todos los servicios en marcha. Se incluye un *script* de Windows para generar la imagen Docker, pero el mismo puede ser extrapolado a entornos Linux. Una vez iniciado un contenedor con la imagen creada, se debe esperar a que se apliquen las configuraciones necesarias (principalmente de rabbitmq) antes de poder acceder a la interfaz gráfica de entrada.
 
 Si todo está correcto, la interfaz gráfica debe ser accesible por: http://127.0.0.1:8001/.
+
+También se expone un panel de administración, propio de rabbitmq, en: http://127.0.0.1:15672/.
