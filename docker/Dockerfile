@@ -36,6 +36,7 @@ RUN mkdir frontend
 COPY ./frontend/dist /home/$USER/frontend/dist
 COPY ./frontend/requirements.txt /home/$USER/frontend/requirements.txt
 COPY ./frontend/*.py /home/$USER/frontend
+COPY ./frontend/*.html /home/$USER/frontend
 RUN pip install -r ./backend/requirements.txt
 
 COPY ./docker/entrypoint.sh entrypoint.sh

@@ -21,8 +21,27 @@ Cada componente del sistema aumentarse para dar respuesta a mayores cargas de tr
 - **Servicio backend:** Se puede mantener un cluster de varias instancias de este servicio, accesibles a través de un balanceador de carga.
 - **Servicio frontend:** Se puede mantener un cluster de varias instancias de este servicio, accesibles a través de un balanceador de carga.
 
+## Puesta a Punto
+Antes de poder crear e iniciar un contenedor docker, es necesario preparar los archivos ejecutables que seran incluidos en dicha imagen.
+
+### Servicio Backend
+Sin pasos adicionales.
+
+### Servicio Frontend
+El mismo consiste en un proyecto node que puede ser compilado ejecutando el siguiente comando:
+
+`cd ./frontend`
+
+`npx rollup -c`
+
 ## Ejecución
-Se puede generar una imagen Docker para poner todos los servicios en marcha. Se incluye un *script* de Windows para generar la imagen Docker, pero el mismo puede ser extrapolado a entornos Linux. Una vez iniciado un contenedor con la imagen creada, se debe esperar a que se apliquen las configuraciones necesarias (principalmente de rabbitmq) antes de poder acceder a la interfaz gráfica de entrada.
+Se puede generar una imagen Docker para poner todos los servicios en marcha. Se puede crear y ejecutar la imagen con los siguientes comandos:
+
+`cd ./docker`
+
+`docker-compose build`
+
+`docker-compose up --detach`
 
 Si todo está correcto, la interfaz gráfica debe ser accesible por: http://127.0.0.1:8001/.
 

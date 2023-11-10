@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  simple_chatbot:
+    container_name: simple_chatbot
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+      - "8000:8000"
+      - "8001:8001"
